@@ -9,10 +9,12 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 const helloRoutes = require("./routes/helloRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 //routes 
 
 app.use("/api", helloRoutes);
+app.use("/api", authRoutes);
 
 const PORT = process.env.PORT || 5000;
 
