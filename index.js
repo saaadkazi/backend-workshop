@@ -10,11 +10,13 @@ const app = express();
 app.use(express.json());
 const helloRoutes = require("./routes/helloRoutes");
 const authRoutes = require("./routes/authRoutes");
+const profileRoutes = require("./routes/profileRoutes");
 
 //routes 
 
 app.use("/api", helloRoutes);
 app.use("/api", authRoutes);
+app.use("/api", profileRoutes);
 
 const PORT = process.env.PORT || 5000;
 
